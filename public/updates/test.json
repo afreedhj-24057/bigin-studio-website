@@ -3,32 +3,31 @@
   "channel": "test",
   "status": "published",
   "available": true,
-  "version": "0.1.0",
-  "tag": "v0.1.0-rehearsal.3",
-  "releaseDate": "2026-11-23T17:44:13Z",
+  "version": "0.1.0-rehearsal.4",
+  "tag": "v0.1.0-rehearsal.4",
+  "releaseDate": "2026-11-24T13:59:42.000Z",
   "updateType": "rehearsal",
   "minimumRequiredVersion": null,
   "releaseNotes": [
-    "PRE-PRODUCTION REHEARSAL BUILD. Not a production release. Do not distribute.",
-    "Bigin Studio v0.1.0",
-    "What's New: Added the new project creation workflow. Improved application navigation.",
-    "Improvements: Improved startup performance.",
-    "Bug Fixes: Fixed terminal initialization issue."
+    "Added the new project creation workflow.",
+    "Improved application navigation.",
+    "Improved startup performance.",
+    "Fixed terminal initialization issue."
   ],
   "platforms": {
     "mac-arm64": {
       "available": true,
-      "url": "https://github.com/afreedhj-24057/bigin-studio-test-releases/releases/download/v0.1.0-rehearsal.3/Bigin-Studio-0.1.0-rehearsal.3-arm64.dmg",
-      "fileName": "Bigin-Studio-0.1.0-rehearsal.3-arm64.dmg",
-      "sha256": "10750094635b8dcdc76953594810cfa72e8d21c893c99c90163b0d7328a73ef9",
-      "size": 103434574
+      "url": "https://github.com/afreedhj-24057/bigin-studio-test-releases/releases/download/v0.1.0-rehearsal.4/Bigin-Studio-0.1.0-rehearsal.4-arm64.dmg",
+      "fileName": "Bigin-Studio-0.1.0-rehearsal.4-arm64.dmg",
+      "sha256": "79e1e15a6b76981380fe85f3cfc2569c9f33eb96e33c1f57a5013b10689cd376",
+      "size": 103435422
     },
     "mac-x64": {
       "available": true,
-      "url": "https://github.com/afreedhj-24057/bigin-studio-test-releases/releases/download/v0.1.0-rehearsal.3/Bigin-Studio-0.1.0-rehearsal.3-x64.dmg",
-      "fileName": "Bigin-Studio-0.1.0-rehearsal.3-x64.dmg",
-      "sha256": "c099eae4937b4d0ec2d7e0027d2d1ab1782d66599edf719978199922ecd365d7",
-      "size": 110169858
+      "url": "https://github.com/afreedhj-24057/bigin-studio-test-releases/releases/download/v0.1.0-rehearsal.4/Bigin-Studio-0.1.0-rehearsal.4-x64.dmg",
+      "fileName": "Bigin-Studio-0.1.0-rehearsal.4-x64.dmg",
+      "sha256": "51aa28fce33a35501be9f6f17928f1f4116d486407bf71cebfcc3bc0d853ca2b",
+      "size": 110152904
     }
   }
 }
