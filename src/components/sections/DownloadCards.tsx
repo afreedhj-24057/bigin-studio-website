@@ -8,6 +8,9 @@ const CARDS: { id: PlatformId; chip: string; arch: string; blurb: string; cta: s
   { id: 'mac-x64', chip: 'Intel Mac', arch: 'x64', blurb: 'Compatible with Intel-based Macs.', cta: 'Download for Intel Mac' },
 ];
 
+/** Starts the download without exposing the URL as a link (GitHub serves the DMG as an attachment, so the page stays put). */
+const startDownload = (url: string) => { window.location.assign(url); };
+
 const MESSAGES = {
   loading: 'Checking for the latest release…',
   unavailable: 'The first production release has not been published yet.',
@@ -43,9 +46,9 @@ export default function DownloadCards() {
               </dl>
               <p className="file"><svg className="ico"><use href="#i-box" /></svg><code>{ready && p!.fileName ? p!.fileName : 'Not available yet'}</code></p>
               {ready ? (
-                <a className="btn btn--primary btn--block" href={p!.url!} {...(p!.fileName ? { download: p!.fileName } : {})}>
+                <button type="button" className="btn btn--primary btn--block" onClick={() => startDownload(p!.url!)}>
                   <svg className="ico" aria-hidden="true"><use href="#i-download" /></svg>{c.cta}
-                </a>
+                </button>
               ) : (
                 <button type="button" className="btn btn--primary btn--block" disabled aria-disabled="true">
                   <svg className="ico" aria-hidden="true"><use href="#i-download" /></svg>{state.status === 'loading' ? 'Checking…' : 'Not available yet'}

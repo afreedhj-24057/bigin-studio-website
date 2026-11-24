@@ -7,7 +7,7 @@ export default function Features() {
   <div className="container">
     <div className="section__head reveal">
       <p className="kicker">Features</p>
-      <h2 id="features-title">Everything in version 0.1.0.</h2>
+      <h2 id="features-title">Everything in the app.</h2>
       <p className="sub">Five areas, built around the day-to-day work of the Bigin client team.</p>
     </div>
     <div className="bento">

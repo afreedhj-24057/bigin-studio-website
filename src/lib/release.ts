@@ -87,7 +87,7 @@ export async function fetchRelease(signal?: AbortSignal): Promise<ReleaseState> 
   const timer = setTimeout(() => timeout.abort(), 8000);
   signal?.addEventListener('abort', () => timeout.abort());
   try {
-    const res = await fetch(MANIFEST_URL, { cache: 'no-store', signal: timeout.signal });
+    const res = await fetch(MANIFEST_URL, { cache: 'no-cache', signal: timeout.signal });
     if (!res.ok) return { status: 'error', reason: 'network' };
     let json: unknown;
     try { json = await res.json(); } catch { return { status: 'error', reason: 'invalid' }; }

@@ -11,7 +11,7 @@ export default function SecurityAccordion() {
         title: <>macOS says it can’t open Bigin Studio — what should I do?</>,
         body: (
           <>
-            <p>Version 0.1.0 is ad-hoc signed and <strong>not notarized</strong> by Apple, so macOS Gatekeeper may ask you to approve it the first time you open it. This is a standard macOS step for one app — there is no need to change any system-wide security setting.</p>
+            <p>Bigin Studio is ad-hoc signed and <strong>not notarized</strong> by Apple, so macOS Gatekeeper may ask you to approve it the first time you open it. This is a standard macOS step for one app — there is no need to change any system-wide security setting.</p>
             <ol>
               <li>In Applications, Control-click (right-click) <strong>Bigin Studio</strong>, choose <strong>Open</strong>, then confirm <strong>Open</strong>.</li>
               <li>If that option isn’t offered, open <strong>System Settings → Privacy &amp; Security</strong>, scroll to the message about Bigin Studio and click <strong>Open Anyway</strong>.</li>
