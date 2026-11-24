@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "channel": "production",
+  "status": "unpublished",
+  "available": false,
+  "version": null,
+  "tag": null,
+  "releaseDate": null,
+  "updateType": null,
+  "minimumRequiredVersion": null,
+  "releaseNotes": null,
+  "platforms": {
+    "mac-arm64": {
+      "available": false,
+      "url": null,
+      "fileName": null,
+      "sha256": null,
+      "size": null
+    },
+    "mac-x64": {
+      "available": false,
+      "url": null,
+      "fileName": null,
+      "sha256": null,
+      "size": null
+    }
+  }
+}
