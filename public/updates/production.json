@@ -1,28 +1,33 @@
 {
   "schemaVersion": 1,
   "channel": "production",
-  "status": "unpublished",
-  "available": false,
-  "version": null,
-  "tag": null,
-  "releaseDate": null,
-  "updateType": null,
-  "minimumRequiredVersion": null,
-  "releaseNotes": null,
+  "status": "published",
+  "available": true,
+  "version": "0.1.0",
+  "tag": "v0.1.0",
+  "releaseDate": "2026-11-24T15:54:34.000Z",
+  "updateType": "optional",
+  "minimumRequiredVersion": "0.1.0",
+  "releaseNotes": [
+    "Added the new project creation workflow.",
+    "Improved application navigation.",
+    "Improved startup performance.",
+    "Fixed terminal initialization issue."
+  ],
   "platforms": {
     "mac-arm64": {
-      "available": false,
-      "url": null,
-      "fileName": null,
-      "sha256": null,
-      "size": null
+      "available": true,
+      "url": "https://github.com/afreedhj-24057/bigin-studio-production-releases/releases/download/v0.1.0/Bigin-Studio-0.1.0-arm64.dmg",
+      "fileName": "Bigin-Studio-0.1.0-arm64.dmg",
+      "sha256": "e0d77f04a18d91e32a80fbba944b6c7ed2ea27bb113e5c59f219957200e643fd",
+      "size": 103434409
     },
     "mac-x64": {
-      "available": false,
-      "url": null,
-      "fileName": null,
-      "sha256": null,
-      "size": null
+      "available": true,
+      "url": "https://github.com/afreedhj-24057/bigin-studio-production-releases/releases/download/v0.1.0/Bigin-Studio-0.1.0-x64.dmg",
+      "fileName": "Bigin-Studio-0.1.0-x64.dmg",
+      "sha256": "b56cad81a472fb9fa8793748bbf153e4a8af8ff741a3338d7903966e061898b4",
+      "size": 110152735
     }
   }
 }
