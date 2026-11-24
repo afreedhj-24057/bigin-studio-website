@@ -11,7 +11,7 @@ const FAQS: { q: string; a: React.ReactNode }[] = [
   { q: 'Does it automatically install project dependencies?', a: <p>During project creation it installs missing Bower dependencies, and it can ask for a personal build token if your build server needs one. You can skip this step and install them manually later. It requires Node.js, npm and Bower on your Mac. Opening an existing folder does not run this step.</p> },
   { q: 'Where are projects stored?', a: <p>In your project root folder, which defaults to <code>~/Bigin Studio Projects</code> and can be changed in Settings. Each project is a normal Git clone you can also use outside the app.</p> },
   { q: 'Does it support Git operations?', a: <p>Yes. You can view staged and unstaged changes, stage and unstage files, commit, commit and push, pull (fast-forward only) and push, and see incoming and outgoing commit counts. For anything else, use the integrated terminal.</p> },
-  { q: 'Does it automatically update?', a: <p>No. Bigin Studio has no update mechanism yet. To upgrade, install the newer DMG over the existing app.</p> },
+  { q: 'Does it automatically update?', a: <p>Yes. Bigin Studio has a built-in update mechanism that checks for new production releases. You can also download the latest DMG from this page and install it over the existing app.</p> },
   { q: 'What should I do if macOS blocks the application?', a: <p>The app is not notarized, so macOS may ask you to approve it once. Control-click the app in Applications and choose <strong>Open</strong>, or use <strong>Open Anyway</strong> in System Settings → Privacy &amp; Security. See the <a href="#install-steps">installation steps</a> for details.</p> },
 ];
 
