@@ -21,6 +21,7 @@ export default function Installation() {
       <div className="install__copy reveal">
         <h3>Install in a minute</h3>
         <ol className="steps">
+          <li><b>Make sure you have admin access.</b><span>You need administrator rights on your Mac to install apps.</span></li>
           <li><b>Select the correct Mac architecture.</b><span>Apple Silicon or Intel — see the hint above.</span></li>
           <li><b>Download the DMG.</b><span>Use the matching button above.</span></li>
           <li><b>Open the downloaded DMG.</b><span>Double-click the file to mount it.</span></li>
