@@ -3,31 +3,35 @@
   "channel": "production",
   "status": "published",
   "available": true,
-  "version": "0.1.0",
-  "tag": "v0.1.0",
-  "releaseDate": "2026-11-24T15:54:34.000Z",
-  "updateType": "optional",
+  "version": "0.1.1",
+  "tag": "v0.1.1",
+  "releaseDate": "2026-11-25T12:05:58.000Z",
+  "updateType": "required",
   "minimumRequiredVersion": "0.1.0",
   "releaseNotes": [
-    "Added the new project creation workflow.",
-    "Improved application navigation.",
-    "Improved startup performance.",
-    "Fixed terminal initialization issue."
+    "Added an in-app update mechanism to check for and download application updates.",
+    "Added support for Test and Production update channels.",
+    "Added mandatory and optional update handling.",
+    "Improved terminal process lifecycle management.",
+    "Improved update download progress and verification.",
+    "Improved application stability.",
+    "Fixed a terminal lifecycle issue where the application could report a service as stopped before its process had fully terminated.",
+    "Fixed service status restoration when stopping a process fails."
   ],
   "platforms": {
     "mac-arm64": {
       "available": true,
-      "url": "https://github.com/afreedhj-24057/bigin-studio-production-releases/releases/download/v0.1.0/Bigin-Studio-0.1.0-arm64.dmg",
-      "fileName": "Bigin-Studio-0.1.0-arm64.dmg",
-      "sha256": "e0d77f04a18d91e32a80fbba944b6c7ed2ea27bb113e5c59f219957200e643fd",
-      "size": 103434409
+      "url": "https://github.com/afreedhj-24057/bigin-studio-production-releases/releases/download/v0.1.1/Bigin-Studio-0.1.1-arm64.dmg",
+      "fileName": "Bigin-Studio-0.1.1-arm64.dmg",
+      "sha256": "d86e93c585a79b0844836ca60afe0aa9a3d1d01ae56ceffe82cf1bf6df2863fc",
+      "size": 103476209
     },
     "mac-x64": {
       "available": true,
-      "url": "https://github.com/afreedhj-24057/bigin-studio-production-releases/releases/download/v0.1.0/Bigin-Studio-0.1.0-x64.dmg",
-      "fileName": "Bigin-Studio-0.1.0-x64.dmg",
-      "sha256": "b56cad81a472fb9fa8793748bbf153e4a8af8ff741a3338d7903966e061898b4",
-      "size": 110152735
+      "url": "https://github.com/afreedhj-24057/bigin-studio-production-releases/releases/download/v0.1.1/Bigin-Studio-0.1.1-x64.dmg",
+      "fileName": "Bigin-Studio-0.1.1-x64.dmg",
+      "sha256": "f990a30dc9f9d4b6bc22a975746e4812a34072c84dd90d579f9560ffd05046ab",
+      "size": 110158398
     }
   }
 }
