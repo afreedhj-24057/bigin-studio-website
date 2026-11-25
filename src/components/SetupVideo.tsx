@@ -121,6 +121,19 @@ export default function SetupVideo() {
     };
   }, [sync]);
 
+  // Pause when the whole Setup section scrolls out of view (PiP keeps playing on purpose).
+  useEffect(() => {
+    const target = root.current?.closest('section') ?? root.current;
+    if (!target || typeof IntersectionObserver === 'undefined') return;
+    const io = new IntersectionObserver(([entry]) => {
+      const v = video.current;
+      if (entry.isIntersecting || !v || v.paused || document.pictureInPictureElement === v) return;
+      v.pause();
+    });
+    io.observe(target);
+    return () => io.disconnect();
+  }, []);
+
   // Smooth progress: rAF runs only while the video is playing.
   useEffect(() => {
     wake();
