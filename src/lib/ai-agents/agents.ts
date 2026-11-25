@@ -23,7 +23,7 @@ export const AGENTS: AgentConfig[] = [
     name: 'Claude Code',
     description: 'AI-powered installation and configuration.',
     status: 'available',
-    cta: 'Continue with Claude',
+    cta: 'Setup with Claude',
     // Documented in the Claude Code desktop docs: claude://code/new opens the new-session
     // page and `q` is URL-encoded text for the prompt box. Desktop never sends it automatically.
     buildLaunchUrl: (prompt) => `claude://code/new?q=${encodeURIComponent(prompt)}`,
