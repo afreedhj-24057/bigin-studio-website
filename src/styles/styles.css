@@ -647,3 +647,37 @@ h3 { font-size: 18px; line-height: 1.3; letter-spacing: -.02em; font-weight: 600
 .release-notes { max-width: 950px; margin: 32px auto 0; padding: 24px 28px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); }
 .release-notes h3 { font-size: 18px; margin-bottom: 10px; }
 .release-notes ul { list-style: disc; padding-left: 20px; display: grid; gap: 6px; color: var(--muted); font-size: 15px; }
+
+/* AI Agent Setup ---------------------------------------------------------- */
+.agents { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 480px)); justify-content: center; align-items: start; gap: var(--space-5); margin-top: var(--space-6); }
+.agent { display: grid; gap: var(--space-4); padding: var(--space-5); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease); }
+.agent:hover, .agent:focus-within { border-color: var(--brand); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.agent__head { display: flex; align-items: center; gap: var(--space-3); }
+.agent[data-agent="claude"] { --t: #d97757; }
+.agent[data-agent="copilot"] { --t: #25a45a; }
+.agent__logo { display: flex; flex: none; }
+.agent__logo .ai-tool__ico { width: 48px; height: 48px; padding: 11px; }
+.agent:hover .ai-tool__ico { background: var(--t); color: #fff; }
+.agent__txt { flex: 1; min-width: 0; }
+.agent__txt h3 { font-size: 18px; }
+.agent__txt p { color: var(--muted); font-size: 14px; }
+.agent__status { flex: none; padding: 4px 10px; border-radius: 999px; background: var(--mint-100); color: var(--brand-ink); font-size: 12px; font-weight: 600; }
+.agent__note { color: var(--muted); font-size: 13px; }
+.agent .btn[data-busy] { opacity: 1; cursor: progress; }
+.agent__result { display: grid; gap: var(--space-3); padding: var(--space-4); border-radius: var(--radius); border: 1px solid var(--line); background: var(--mint-50); font-size: 14px; }
+.agent__result--warning { border-color: var(--warn); background: transparent; }
+.agent__result h4 { font-size: 15px; }
+.agent__result--warning h4 { color: var(--warn-text); }
+.agent__result ol { padding-left: 20px; display: grid; gap: 6px; color: var(--muted); }
+.agent__result .btn { justify-self: start; }
+.agent__prompt { width: 100%; resize: vertical; padding: var(--space-3); font: 12px/1.5 var(--mono); color: var(--output-text); background: var(--output-bg); border: 1px solid var(--line-strong); border-radius: var(--radius); }
+@media (prefers-reduced-motion: reduce) { .agent, .agent:hover { transition: none; transform: none; } }
+.agent-setup { margin-top: var(--space-7); padding-top: var(--space-7); border-top: 1px solid var(--line); }
+.agent-setup__head { max-width: 720px; margin: 0 auto; text-align: center; display: grid; gap: var(--space-2); }
+.agent-setup__head h3 { font-size: 24px; }
+.agent-setup__head .sub { color: var(--muted); }
+.agent-setup .agents { margin-top: var(--space-5); }
+.agent__status--off { background: var(--bg); color: var(--muted); border: 1px solid var(--line); }
+.agent:has(.btn:disabled) { opacity: .7; }
+.agent:has(.btn:disabled):hover { border-color: var(--line); box-shadow: var(--shadow-sm); transform: none; }
+.agent:has(.btn:disabled):hover .ai-tool__ico { background: var(--surface); color: var(--t); }

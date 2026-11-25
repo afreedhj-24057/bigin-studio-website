@@ -1,5 +1,6 @@
 import SetupVideo from '../SetupVideo';
 import SettingsDetails from '../SettingsDetails';
+import AiAgentSetup from './AiAgentSetup';
 
 export default function SetupGuide() {
   return (
@@ -57,6 +58,8 @@ export default function SetupGuide() {
       </ol>
     </div>
     <p className="guide__disclaimer">The recording shows one example run. Exact steps and timing can vary by project and machine.</p>
+
+    <AiAgentSetup />
   </div>
 </section>
     </>
