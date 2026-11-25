@@ -61,6 +61,16 @@
 .back:hover { text-decoration: underline; }
 .back .tool-arrow { position: static; width: 18px; height: 18px; color: currentColor; }
 .back:hover .tool-arrow { transform: translateX(-3px); }
+.tool { font: inherit; text-align: left; cursor: pointer; width: 100%; }
+.tdialog { width: min(880px, calc(100vw - 32px)); max-height: calc(100vh - 48px); padding: 0; margin: auto; border: 0; background: transparent; color: var(--ink); overflow: auto; }
+.tdialog::backdrop { background: rgba(10, 20, 24, .55); }
+.tdialog .detail { position: relative; margin-top: 0; }
+.tdialog__title { font-size: clamp(26px, 4vw, 36px); line-height: 1.15; letter-spacing: -.03em; margin-top: 8px; }
+.tdialog__close { position: absolute; top: 14px; right: 14px; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; padding: 0; color: var(--muted); background: none; border: 0; border-radius: 6px; cursor: pointer; }
+.tdialog__close:hover { color: var(--ink); background: var(--mint-50); }
+.tdialog__close .ico { width: 18px; height: 18px; }
+.dsec h3 { font-size: 15px; letter-spacing: -.01em; margin-bottom: 8px; }
+button.back { background: none; border: 0; padding: 0; cursor: pointer; font-family: inherit; }
 .notfound { text-align: center; padding: 24px 0; }
 .notfound h1 { font-size: 28px; letter-spacing: -.03em; }
 .notfound p { margin: 12px auto 24px; max-width: 48ch; color: var(--muted); }

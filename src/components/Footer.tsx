@@ -26,7 +26,7 @@ export default function Footer({ variant = 'home' }: { variant?: 'home' | 'tools
                 <Link href="/ui-tools">UI Tools</Link>
               </>
             ) : (
-              TOOLS.map((t) => <Link key={t.id} href={`/ui-tools/${t.id}`}>{t.name}</Link>)
+              TOOLS.map((t) => <Link key={t.id} href={`/ui-tools#${t.id}`}>{t.name}</Link>)
             )}
           </nav>
         </div>

@@ -116,4 +116,3 @@ export const TOOLS: Tool[] = [
 
 export const getTool = (id: string) => TOOLS.find((t) => t.id === id);
 export type ToolView = 'card' | 'list';
-export const toolHref = (id: string, view: ToolView) => `/ui-tools/${encodeURIComponent(id)}${view === 'list' ? '?view=list' : ''}`;

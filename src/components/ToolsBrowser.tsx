@@ -1,19 +1,38 @@
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import { TOOLS, toolHref, type ToolView } from '@/lib/tools';
+import { useEffect, useRef, useState } from 'react';
+import { TOOLS, getTool, type ToolView } from '@/lib/tools';
+import ToolDialog from './ToolDialog';
 import ToolIcon from './ToolIcon';
 
 export default function ToolsBrowser() {
   const pathname = usePathname();
   const [view, setView] = useState<ToolView>('card');
+  const [openId, setOpenId] = useState<string | null>(null);
+  const lastTrigger = useRef<HTMLElement | null>(null);
 
   // Cards render on the server; restore a ?view=list preference after mount.
   useEffect(() => {
     if (new URLSearchParams(window.location.search).get('view') === 'list') setView('list');
   }, []);
+
+  // Footer links use /ui-tools#<tool-id> to open a tool's details.
+  useEffect(() => {
+    const fromHash = () => {
+      const id = decodeURIComponent(window.location.hash.slice(1));
+      if (id && getTool(id)) setOpenId(id);
+    };
+    fromHash();
+    window.addEventListener('hashchange', fromHash);
+    return () => window.removeEventListener('hashchange', fromHash);
+  }, []);
+
+  const close = () => {
+    setOpenId(null);
+    if (window.location.hash) window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    lastTrigger.current?.focus();
+  };
 
   const choose = (v: ToolView) => {
     setView(v);
@@ -36,15 +55,16 @@ export default function ToolsBrowser() {
       <ul className={'ui-tools' + (view === 'list' ? ' ui-tools--list' : '')} id="tools">
         {TOOLS.map((t) => (
           <li key={t.id}>
-            <Link className="tool" href={toolHref(t.id, view)}>
+            <button type="button" className="tool" onClick={(e) => { lastTrigger.current = e.currentTarget; setOpenId(t.id); }}>
               <span className="tool__icon"><ToolIcon tool={t} /></span>
               <span className="tool__body"><span className="tool__name">{t.name}</span><span className="tool__desc">{t.description}</span></span>
               <span className="tool__cat">{t.category}</span>
               <svg className="tool-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
-            </Link>
+            </button>
           </li>
         ))}
       </ul>
+      <ToolDialog tool={openId ? getTool(openId) ?? null : null} onClose={close} />
     </>
   );
 }
