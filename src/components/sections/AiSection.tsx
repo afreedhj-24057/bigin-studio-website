@@ -1,3 +1,5 @@
+import AiToolIcon from "@/components/AiToolIcon";
+
 
 export default function AiSection() {
   return (
@@ -25,10 +27,10 @@ export default function AiSection() {
 
       <h3 className="mini">Supported tools</h3>
       <ul className="tools">
-        <li>Claude Code</li>
-        <li>Cursor</li>
-        <li>Codex</li>
-        <li>GitHub Copilot</li>
+        <li data-tool="claude"><AiToolIcon name="claude" /><span className="tool__txt"><b>Claude Code</b><small>CLAUDE.md</small></span><svg className="tool__ok" aria-hidden="true"><use href="#i-check"/></svg></li>
+        <li data-tool="cursor"><AiToolIcon name="cursor" /><span className="tool__txt"><b>Cursor</b><small>AGENTS.md</small></span><svg className="tool__ok" aria-hidden="true"><use href="#i-check"/></svg></li>
+        <li data-tool="codex"><AiToolIcon name="codex" /><span className="tool__txt"><b>Codex</b><small>AGENTS.md</small></span><svg className="tool__ok" aria-hidden="true"><use href="#i-check"/></svg></li>
+        <li data-tool="copilot"><AiToolIcon name="copilot" /><span className="tool__txt"><b>GitHub Copilot</b><small>copilot-instructions.md</small></span><svg className="tool__ok" aria-hidden="true"><use href="#i-check"/></svg></li>
       </ul>
       <p className="fine">Bigin Studio configures these tools to read your project's rules. The tools themselves, and any subscriptions they require, are not included.</p>
     </div>
