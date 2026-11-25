@@ -33,7 +33,7 @@ export default function ToolsBrowser() {
           </button>
         </div>
       </div>
-      <ul className={'tools' + (view === 'list' ? ' tools--list' : '')} id="tools">
+      <ul className={'ui-tools' + (view === 'list' ? ' ui-tools--list' : '')} id="tools">
         {TOOLS.map((t) => (
           <li key={t.id}>
             <Link className="tool" href={toolHref(t.id, view)}>
