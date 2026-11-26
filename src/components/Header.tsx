@@ -12,8 +12,8 @@ const HOME_LINKS = [
   { href: '#overview', label: 'Overview' },
   { href: '#features', label: 'Features' },
   { href: '#how-it-works', label: 'How it works' },
-  { href: '#installation', label: 'Installation' },
-  { href: '#setup-guide', label: 'Setup guide' },
+  { href: '#agent-setup', label: 'AI setup' },
+  { href: '#installation', label: 'Manual setup' },
 ];
 
 function storedMode(): Mode {

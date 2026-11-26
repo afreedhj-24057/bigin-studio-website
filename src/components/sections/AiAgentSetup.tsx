@@ -49,7 +49,7 @@ export default function AiAgentSetup() {
       setResult({
         tone: 'warning',
         title: 'Something went wrong preparing the setup',
-        steps: ['Reload the page and try again. If it keeps happening, follow the manual installation steps above.'],
+        steps: ['Reload the page and try again. If it keeps happening, follow the manual installation steps below.'],
         showManualCopy: false,
         showInstallLink: false,
       });
@@ -62,11 +62,13 @@ export default function AiAgentSetup() {
   const working = phase === 'preparing' || phase === 'copying' || phase === 'opening';
 
   return (
-    <div className="agent-setup" id="agent-setup" aria-labelledby="agent-setup-title">
-      <div className="agent-setup__head reveal">
-        <p className="kicker">Setup with your AI Agent</p>
-        <h3 id="agent-setup-title">Set up Bigin Studio with your AI agent</h3>
+    <section className="section" id="agent-setup" aria-labelledby="agent-setup-title">
+     <div className="container">
+      <div className="section__head section__head--center reveal">
+        <p className="kicker">AI-assisted setup</p>
+        <h2 id="agent-setup-title">Set up Bigin Studio with your AI agent</h2>
         <p className="sub">Let your AI coding agent install and configure Bigin Studio on your Mac. Follow a guided setup without manually going through every installation step.</p>
+        <p className="hint">Prefer to do it yourself? <a href="#installation">Install manually instead</a>.</p>
       </div>
 
         <ul className="agents reveal">
@@ -112,6 +114,7 @@ export default function AiAgentSetup() {
             </li>
           ))}
         </ul>
-    </div>
+     </div>
+    </section>
   );
 }

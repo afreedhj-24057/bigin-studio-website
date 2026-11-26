@@ -672,12 +672,9 @@ h3 { font-size: 18px; line-height: 1.3; letter-spacing: -.02em; font-weight: 600
 .agent__result .btn { justify-self: start; }
 .agent__prompt { width: 100%; resize: vertical; padding: var(--space-3); font: 12px/1.5 var(--mono); color: var(--output-text); background: var(--output-bg); border: 1px solid var(--line-strong); border-radius: var(--radius); }
 @media (prefers-reduced-motion: reduce) { .agent, .agent:hover { transition: none; transform: none; } }
-.agent-setup { margin-top: var(--space-7); padding-top: var(--space-7); border-top: 1px solid var(--line); }
-.agent-setup__head { max-width: 720px; margin: 0 auto; text-align: center; display: grid; gap: var(--space-2); }
-.agent-setup__head h3 { font-size: 24px; }
-.agent-setup__head .sub { color: var(--muted); }
-.agent-setup .agents { margin-top: var(--space-5); }
 .agent__status--off { background: var(--bg); color: var(--muted); border: 1px solid var(--line); }
 .agent:has(.btn:disabled) { opacity: .7; }
 .agent:has(.btn:disabled):hover { border-color: var(--line); box-shadow: var(--shadow-sm); transform: none; }
 .agent:has(.btn:disabled):hover .ai-tool__ico { background: var(--surface); color: var(--t); }
+.setup-guide { margin-top: 96px; padding-top: 64px; border-top: 1px solid var(--line); }
+@media (max-width: 760px) { .setup-guide { margin-top: 64px; padding-top: 48px; } }

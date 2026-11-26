@@ -21,7 +21,8 @@ export default function Footer({ variant = 'home' }: { variant?: 'home' | 'tools
                 <a href="#features">Features</a>
                 <a href="#how-it-works">How it works</a>
                 <a href="#ai">AI development</a>
-                <a href="#installation">Installation</a>
+                <a href="#agent-setup">AI setup</a>
+                <a href="#installation">Manual setup</a>
                 <a href="#faq">FAQ</a>
                 <Link href="/ui-tools">UI Tools</Link>
               </>

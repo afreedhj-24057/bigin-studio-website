@@ -1,15 +1,16 @@
 import SecurityAccordion from '../SecurityAccordion';
 import DownloadCards from './DownloadCards';
+import SetupGuide from './SetupGuide';
 
 export default function Installation() {
   return (
     <>
 
-<section className="section" id="installation" aria-labelledby="install-title">
+<section className="section section--alt" id="installation" aria-labelledby="install-title">
   <div className="container">
     <div className="section__head section__head--center reveal">
-      <p className="kicker">Installation</p>
-      <h2 id="install-title">Get started with Bigin Studio.</h2>
+      <p className="kicker">Manual setup</p>
+      <h2 id="install-title">Download, install and set up Bigin Studio.</h2>
       <p className="sub">Bigin Studio currently supports macOS 11 (Big Sur) or later, with separate installers for Apple Silicon and Intel Macs.</p>
     </div>
 
@@ -59,6 +60,8 @@ export default function Installation() {
         <li><strong>VS Code</strong> and the <strong>Claude desktop app</strong> are optional, for the “Open in” actions</li>
       </ul>
     </div>
+
+    <SetupGuide />
   </div>
 </section>
     </>

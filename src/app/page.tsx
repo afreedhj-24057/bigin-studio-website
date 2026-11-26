@@ -4,8 +4,8 @@ import Why from '@/components/sections/Why';
 import Features from '@/components/sections/Features';
 import HowItWorks from '@/components/sections/HowItWorks';
 import AiSection from '@/components/sections/AiSection';
+import AiAgentSetup from '@/components/sections/AiAgentSetup';
 import Installation from '@/components/sections/Installation';
-import SetupGuide from '@/components/sections/SetupGuide';
 import Faq from '@/components/Faq';
 import Footer from '@/components/Footer';
 
@@ -32,8 +32,8 @@ export default function Home() {
         <Features />
         <HowItWorks />
         <AiSection />
+        <AiAgentSetup />
         <Installation />
-        <SetupGuide />
         <Faq />
       </main>
       <Footer variant="home" />

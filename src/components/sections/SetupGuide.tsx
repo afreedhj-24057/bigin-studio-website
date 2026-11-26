@@ -1,16 +1,14 @@
 import SetupVideo from '../SetupVideo';
 import SettingsDetails from '../SettingsDetails';
-import AiAgentSetup from './AiAgentSetup';
 
 export default function SetupGuide() {
   return (
     <>
 
-<section className="section" id="setup-guide" aria-labelledby="setup-title">
-  <div className="container">
+<div className="setup-guide" id="setup-guide" aria-labelledby="setup-title">
     <div className="section__head section__head--center reveal">
-      <p className="kicker">Setup guide</p>
-      <h2 id="setup-title">Get Started with Bigin Studio</h2>
+      <p className="kicker">After installing</p>
+      <h3 id="setup-title">Your first running workspace</h3>
       <p className="sub">From installation to your first running BiginClient development environment, follow this quick walkthrough.</p>
     </div>
 
@@ -58,10 +56,7 @@ export default function SetupGuide() {
       </ol>
     </div>
     <p className="guide__disclaimer">The recording shows one example run. Exact steps and timing can vary by project and machine.</p>
-
-    <AiAgentSetup />
-  </div>
-</section>
+</div>
     </>
   );
 }
